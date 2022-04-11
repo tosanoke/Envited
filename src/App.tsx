@@ -1,7 +1,8 @@
 import React from "react";
+import AppNavigator from "./navigation/AppNavigator";
 
 function App() {
-  return <div>Welcome</div>;
+  return <AppNavigator />;
 }
 
 export default App;

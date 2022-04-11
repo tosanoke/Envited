@@ -1,11 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+import { ThemeProvider, responsiveFontSizes } from "@mui/material/styles";
+import { themes } from "./lib/MaterialUI/theme";
+import { RecoilRoot } from "recoil";
+import { QueryClient,QueryClientProvider  } from "react-query";
 
+const theme = responsiveFontSizes(themes);
+const queryClient = new QueryClient();
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <RecoilRoot>
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      </RecoilRoot>
+    </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
