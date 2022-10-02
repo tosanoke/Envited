@@ -37,6 +37,14 @@ export const themes = createTheme({
     button: {
       textTransform: "capitalize",
     },
+    subtitle1: {
+        fontSize: 36,
+        color: COLORS.primaryMain,
+        margin: 0,
+        padding: 0,
+
+
+      },
   },
   palette: {
     primary: {
@@ -47,6 +55,9 @@ export const themes = createTheme({
     },
     text: {
       primary: COLORS.textMain,
+    },
+    background: {
+      default: COLORS.background,
     },
   },
 
